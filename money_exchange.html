@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    label {
+  
+      margin-right: 1em;
+    }
+
+  </style>
+<head>
+<p style="font-weight: bold;
+          margin-left: 140px;
+          color: red;">ỨNG DỤNG CHUYỂN ĐỔI TIỀN TỆ</p>
+
+</head>
+
+<body>
+  <span style="margin-left: 40px;">Amount</span>&nbsp;<span style="margin-left: 100px;">From Currency</span>&nbsp;<span style="margin-left: 80px;">To Currency</span><br><br>
+
+  <input type="text" placeholder="Nhập số tiền VND" id="amount" style="margin-left: 10px;width: 140px;height: 25px;text-align: center;color: red;">
+
+  <select name="" id="fromcurrency" style="margin-left: 30px;height: 25px;">
+    <option value="VND">Việt Nam Đồng</option>
+
+  </select>
+
+  <select name="" id="tocurrency" style="margin-left: 60px;height: 25px;">
+    <option value="US">US DOLLAR</option>
+    <option value="CHF">SWISS FRANC</option>
+    <option value="JP">Đồng Yên Nhật</option>
+    <option value="KRW">KOREAN WON</option>
+    <option value="HKD">HONGKONG DOLLAR</option>
+    <option value="INR">INDIAN RUPEE</option>
+    <option value="AUD">AUSTRALIAN DOLLAR</option>
+    <option value="CNY">YUAN RENMINBI</option>
+
+  </select>
+
+  <button type="button" style="margin-left: 40px;
+                              color: blue;font-weight: bold;font-size: 14px;" onclick="doitien();">Convert</button><br><br>
+
+  <p id="exchange_rate" style="margin-left: 20px;">Tỷ giá: </p>
+
+  <p id="result" style="color: blue;
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-left: 20px;">Result</p>
+
+</body>
+
+</html>
+
+<script src="money_exchange.js"></script>
