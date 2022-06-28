@@ -1,7 +1,9 @@
 function doitien() {
-  let vnd, country;
-  vnd = +document.getElementById("amount").Value;
-  country = document.getElementById("tocurrency").Value;
+  let vnd, country, country_label, country_name;
+  vnd = +document.getElementById("amount").value;
+  country = document.getElementById("tocurrency").value;
+  country_label = document.getElementById("tocurrency");
+  country_name = country_label.options[country_label.selectedIndex].innerHTML;
   let tygia = 0;
  
     
@@ -33,9 +35,9 @@ function doitien() {
   }
 
  
-  let display_rate = ("tỷ giá: " + parseFloat(tygia));
+  let display_rate = ("tỷ giá: " + parseFloat(tygia).toLocaleString() + " vnd / 1 " + country_name);
 
-  let display = (" Số tiền sau quy đổi là: " + parseFloat(vnd/tygia));
+  let display = (" Số tiền " + parseFloat(vnd).toLocaleString() + " vnd sau quy đổi là: " + parseFloat(vnd/tygia).toFixed(2) + " " + country_name);
 
   document.getElementById("exchange_rate").innerHTML = display_rate;
   document.getElementById("result").innerHTML = display;
